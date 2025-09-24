@@ -23,7 +23,7 @@ export default function ProductDetails({ product }: ProductDetailsProps) {
       <div className="space-y-4">
         {/* Main Image */}
         <div className="aspect-square rounded-xl overflow-hidden bg-gray-100">
-          {images.length > 0 ? (
+          {images.length > 0 && images[selectedImageIndex] ? (
             <img
               src={`${images[selectedImageIndex].imgix_url}?w=800&h=800&fit=crop&auto=format,compress`}
               alt={metadata?.name || product.title}

@@ -1,4 +1,5 @@
 import { createBucketClient } from '@cosmicjs/sdk'
+import { Collection } from '@/types'
 
 export const cosmic = createBucketClient({
   bucketSlug: process.env.COSMIC_BUCKET_SLUG as string,
@@ -55,8 +56,8 @@ export async function getCollections() {
       .props(['id', 'title', 'slug', 'metadata'])
       .depth(1);
     
-    // Sort by display_order
-    const collections = response.objects.sort((a, b) => {
+    // Sort by display_order with proper typing
+    const collections = (response.objects as Collection[]).sort((a: Collection, b: Collection) => {
       const orderA = a.metadata?.display_order || 999;
       const orderB = b.metadata?.display_order || 999;
       return orderA - orderB;
