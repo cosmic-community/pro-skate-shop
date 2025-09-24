@@ -18,7 +18,8 @@ module.exports = {
         accent: {
           DEFAULT: '#ff6b35',
           foreground: '#ffffff',
-        }
+        },
+        border: '#e5e7eb',
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],

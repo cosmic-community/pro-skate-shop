@@ -9,8 +9,7 @@ const nextConfig = {
   images: {
     domains: ['cdn.cosmicjs.com', 'imgix.cosmicjs.com'],
     unoptimized: true
-  },
-  typedRoutes: false
+  }
 }
 
 module.exports = nextConfig
